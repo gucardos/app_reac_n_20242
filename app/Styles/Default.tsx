@@ -27,6 +27,12 @@ const Style = StyleSheet.create(
         cardText:{
             fontSize: 18,
             color: '#fff',
+        },
+        image:{
+            width:100,
+            height:100,
+            objectFit:"contain",
+            resizeMode:"contain"
         }
     }
 )
