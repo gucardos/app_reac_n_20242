@@ -9,12 +9,15 @@ const CadastroProduto = ()=>{
 let [nome,SetNome] = useState('');
 let [descricao,SetDescricao] = useState('');
 let [preco,SetPreco] = useState(0);
+let [foto,SetFoto] = useState('');
     return(
         <View>
             <Text  >Nome:</Text>
             <TextInput onChangeText={SetNome} value={nome}/>
             <Text  >Descrição:</Text>
             <TextInput onChangeText={SetDescricao} value={descricao}/>
+            <Text  >Foto:</Text>
+            <TextInput onChangeText={SetFoto} value={foto}/>
             <Text >Preço:</Text>
             <TextInput onChangeText={
                 (v)=>
@@ -33,6 +36,7 @@ let [preco,SetPreco] = useState(0);
             nome: nome,
             descricao: descricao,
             preco: preco,
+            foto: foto,
         } as Produto;
         let api = 'https://api-docker-2t8m.onrender.com/api/produtos';
         axios.post(api,produto)

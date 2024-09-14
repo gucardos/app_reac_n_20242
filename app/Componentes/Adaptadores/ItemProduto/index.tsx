@@ -8,17 +8,18 @@ import axios from "axios";
 
 interface PropProd{
     produto:Produto,
-    
+    aoExcluir?:Function
 }
 
 
-const  ItemProduto:React.FC<PropProd> = ({produto})=> {
+const  ItemProduto:React.FC<PropProd> = ({produto,aoExcluir})=> {
     console.log(produto)
 
     function Excluir(id: number) {
         let api = 'https://api-docker-2t8m.onrender.com/api/produtos'
         axios.delete(`${api}/${id}`)
         .then((resp)=>{
+            aoExcluir?.call(null) ;
             Alert.alert('Produto excluído com sucesso');
             alert('Produto excluído com sucesso');
         })
