@@ -28,7 +28,8 @@ const  ItemProduto:React.FC<PropProd> = ({produto,aoExcluir})=> {
     return(
         <View style={Style.card}>
             <Text style={Style.cardText}>{produto.nome}</Text>
-            <Text style={Style.cardText}>{produto.preco}</Text>
+            <Text style={Style.cardText}>{produto.descricao}</Text>
+            <Text style={Style.cardText}>R$ {produto.preco}</Text>
             <Image source= {{uri:produto.foto}}  style={Style.image}/>
             <Button title="Excluir" onPress={()=>{Excluir(produto.id)}}/>
             
