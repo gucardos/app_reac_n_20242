@@ -2,17 +2,17 @@ import { StyleSheet } from "react-native"
 
 const Style = StyleSheet.create(
     {
-        container:{
+        container: {
             flex: 1,
             justifyContent: 'center',
             alignItems: 'center',
             backgroundColor: '#f5f5f5',
             
         },
-        card:{
+        card: {
             width: 300,
-            height: 250,
-            backgroundColor: '#aaaaaa',
+            height: 200,
+            backgroundColor: '#AAAAAA',
             borderRadius: 10,
             elevation: 5, // Para Android
             shadowColor: '#000', // Para iOS
@@ -22,11 +22,12 @@ const Style = StyleSheet.create(
             justifyContent: 'center',
             alignItems: 'center',
             padding: 20,
-            marginVertical: 20,
+            marginVertical: 20
         },
-        cardText:{
+        cardText: {
             fontSize: 18,
-            color: '#fff',
+            color: '#333',
+            fontWeight:"bold"
         },
         image:{
             width:100,
@@ -34,6 +35,7 @@ const Style = StyleSheet.create(
             objectFit:"contain",
             resizeMode:"contain"
         }
+
     }
 )
 
